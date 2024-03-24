@@ -5,12 +5,12 @@ import { Link } from "react-router-dom"
 const table = () => {
   const [users,setUsers]=useState([])
   useEffect(()=>{
-    axios.get("http://localhost:8080")
+    axios.get("https://crudpractice-api.vercel.app/")
     .then(result=>setUsers(result.data))
     .catch(err=>console.log(err))
   },[])
   const handleDelete=(id)=>{
-    axios.delete("http://localhost:8080/delete/"+id)
+    axios.delete("https://crudpractice-api.vercel.app/delete/"+id)
     .then(result=>{console.log(result)
       window.location.reload()
     })

@@ -9,7 +9,7 @@ const Update = () => {
   const[age,setAge]=useState()
   const navigate=useNavigate()
   useEffect(()=>{
-    axios.get("http://localhost:8080/getUser/"+id)
+    axios.get("https://crudpractice-api.vercel.app/getUser/"+id)
     .then((result)=>{
       console.log(result)
       
@@ -23,7 +23,7 @@ const Update = () => {
 
   const update=(e)=>{
     e.preventDefault();
-    axios.put("http://localhost:8080/update/"+id,{Name:name,Email:email,Age:age})
+    axios.put("https://crudpractice-api.vercel.app/update/"+id,{Name:name,Email:email,Age:age})
     .then(result=>{
       console.log(result)
       navigate("/")

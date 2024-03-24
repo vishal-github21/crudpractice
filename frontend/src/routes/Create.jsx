@@ -8,7 +8,7 @@ const Create = () => {
   const navigate=useNavigate()
   const Submit=(e)=>{
     e.preventDefault();
-    axios.post("http://localhost:8080/create",{Name:name,Email:email,Age:age})
+    axios.post("https://crudpractice-api.vercel.app/create",{Name:name,Email:email,Age:age})
     .then(result=>{
       console.log(result)
       navigate("/")
